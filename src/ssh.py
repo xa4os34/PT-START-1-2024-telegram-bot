@@ -27,6 +27,7 @@ class SshResult:
     @staticmethod
     def Error(error: SshError, stderr: str):
         result = SshResult()
+        result.hasError = True
         result.error = error
         result.stderr = stderr
         return result
